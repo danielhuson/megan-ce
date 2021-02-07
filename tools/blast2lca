@@ -34,6 +34,6 @@ vmOptions=$(grep "^-" $bin_dir/../MEGAN.vmoptions)
 
 modulepath="$jars_dir:$jars2_dir"
 
-java_flags="-server -Duser.language=en -Duser.region=US $vmOptions"
+java_flags="-server -Duser.language=en -Duser.region=US -Djava.awt.headless=true $vmOptions"
 
 $java $java_flags --module-path=$modulepath --add-modules=megan megan.tools.Blast2LCA  $options
